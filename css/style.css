@@ -194,14 +194,14 @@ display:inline-block;
     z-index: 1;
 }
 .banner-info h3{
-	color: #FFF;
+	color: #232323;
 	font-weight: 700;
 	font-size:3em;
 	text-transform: uppercase;
 	    z-index: 999;
 }
 .banner-info p{
-	color: #FFF;
+	color: #232323;
 	line-height: 1.5em;
 	font-size: 1.2em;
 	width:70%;
