@@ -1,4 +1,21 @@
 #aboutp {
-text-align: justify;
+    text-align: justify;
+}
 
+#signupbutton {
+    background: #ed645c;
+    padding: 5px 10px;
+    color: white;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+}
+
+#signupbutton a {
+text-style: none;
+color: white;
+}
+
+#signupbutton:hover {
+background: black;
 }
