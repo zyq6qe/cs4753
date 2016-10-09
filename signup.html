@@ -66,25 +66,35 @@
     <h3>Sign Up</h3>
     <div class="section group" id="signup">
         <br>
-        <form>
-            First name:<br>
-            <input type="text" name="firstname" required><br><br>
-            Last name:<br>
-            <input type="text" name="lastname"><br><br>
-            Email:<br>
-            <!--give alert if invalid input-->
-            <input type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"><br><br>
-            Address:<br>
-            <input type="text" name="address"><br><br>
-            City:<br>
-            <input type="text" name="city"><br><br>
-            State:<br>
-            <input type="text" name="state"><br><br>
-            Zip code:<br>
-            <input type="text" name="zipcode"><br><br>
+        <form action="signup.php" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>First name:</label>
+                    <input class="form-control" placeholder="Enter your first name" type="text" name="firstname" required>
+                    <br/>
+                    <label>Last name:</label>
+                    <input class="form-control" placeholder="Enter your last name" type="text" name="lastname" required>
+                    <br/>
+                    <label>Email:</label>
+                    <input class="form-control" placeholder="Enter your email" type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                </div>
+                <div class="col-md-6">
+                    <label>Address:</label>
+                    <input class="form-control" placeholder="Enter your first name" type="text" name="address" required>
+                    <br/>
+                    <label>City:</label>
+                    <input class="form-control" placeholder="Enter your last name" type="text" name="city" required>
+                    <br/>
+                    <label>State:</label>
+                    <input class="form-control" placeholder="Enter your email" type="text" name="state" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                    <br/>
+                    <label>Zip Code:</label>
+                    <input class="form-control" placeholder="Enter your last name" type="text" name="zipcode" required>
+                </div>
+            </div>
         </form>
-
-        <p id="signupbutton"><a href="#">Sign Up!</a></p><br>
+        <br/>
+        <p id="signupbutton" class="btn btn-primary"><a href="#">Sign Up!</a></p><br>
 
     </div>
 
