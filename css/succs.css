@@ -24,6 +24,7 @@ background: black;
 
 label {
     font-size: 18px;
+    padding-bottom: 5px;
 }
 
 .form-control {
