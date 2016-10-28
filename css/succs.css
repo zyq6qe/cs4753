@@ -2,7 +2,7 @@
     text-align: justify;
 }
 
-#signupbutton {
+#mybutton {
     text-align: center;
     border: none;
     background: #ed645c;
@@ -13,12 +13,12 @@
     text-align: center;
 }
 
-#signupbutton a {
+#mybutton a {
 text-style: none;
 color: white;
 }
 
-#signupbutton:hover {
+#mybutton:hover {
 background: black;
 }
 
