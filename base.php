@@ -24,23 +24,44 @@
 
 <body>
 
+<div id="spacing"></div>
 
-<div class="header-top">
-    <div class="header-bottom">
-        <div class="logo">
-            <h1><a href="index.php">Succs4You</a></h1>
-        </div>
-        <!---->
-        <div class="top-nav">
-            <ul class="memenu skyblue">
-                <li class="grid"><a href="index.php">Home</a></li>
-                <li class="grid"><a href="about.html">About Us</a></li>
-                <li class="grid"><a href="signup.html">Sign Up</a></li>
-            </ul>
-        </div>
+<!--<div class="header-top">-->
+<!--    <div class="header-bottom">-->
+<!--        <div class="logo">-->
+<!--            <h1><a href="index.php">Succs4You</a></h1>-->
+<!--        </div>-->
+<!--        <!---->
+<!--        <div class="top-nav">-->
+<!--            <ul class="memenu skyblue">-->
+<!--                <li class="grid"><a href="index.php">Home</a></li>-->
+<!--                <li class="grid"><a href="about.php">About Us</a></li>-->
+<!--                <li class="grid"><a href="signup.php">Sign Up</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="clearfix"> </div>-->
+<!--</div>-->
+
+
+
+<div id="myheader">
+    <div id="mylogo">
+        <a href="index.php">Succs4You</a>
     </div>
-    <div class="clearfix"> </div>
+    <div id="mynavleft">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About Us</a></li>
+        </ul>
+    </div>
+    <div id="mynavright">
+        <ul>
+            <li id="navright"><a href="signup.php">Sign Up</a></li>
+        </ul>
+    </div>
 </div>
+
 <!---->
 <script src="js/bootstrap.js"> </script>
 
