@@ -28,12 +28,12 @@
 <div class="header-top">
     <div class="header-bottom">
         <div class="logo">
-            <h1><a href="index.html">Succs4You</a></h1>
+            <h1><a href="index.php">Succs4You</a></h1>
         </div>
         <!---->
         <div class="top-nav">
             <ul class="memenu skyblue">
-                <li class="grid"><a href="index.html">Home</a></li>
+                <li class="grid"><a href="index.php">Home</a></li>
                 <li class="grid"><a href="about.html">About Us</a></li>
                 <li class="grid"><a href="signup.html">Sign Up</a></li>
             </ul>
