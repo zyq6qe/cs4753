@@ -12,7 +12,7 @@ include "base.php";
             <div class="panel-group"> 
                 <div class="panel panel-default"> 
                     <div class="panel-heading panel-heading-custom">
-                        Personal Information
+                        <h3 class="panel-title">Personal Information</h3>
                     </div> 
                     <div class="panel-body">
                         <div class="row">
@@ -101,13 +101,10 @@ include "base.php";
 
             <div class="panel panel-default"> 
                 <div class="panel-heading panel-heading-custom">
-                    Banking Information
+                    <h3 class="panel-title">Banking Information</h3>
                 </div> 
                 <div class="panel-body">
-                    <div class="row">
-                        INSERT CREDIT FORM HERE
-                        <br/>
-                    </div>
+                    INSERT CREDIT FORM HERE
                 </div>
             <input type="submit" id="mybutton" class="btn btn-primary">
         </form>
