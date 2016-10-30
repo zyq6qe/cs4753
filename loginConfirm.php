@@ -36,7 +36,7 @@ else { ?>
     <div class="container">
         <br/><br/>
         <p>Invalid email or password.</p><br/>
-        <p id="mybutton" class="btn btn-primary"><a href="index.php">Back to home</a></p>
+        <p id="mybutton" class="btn btn-primary"><a href="login.php">Try again</a></p>
     </div>
 <?php
 }
