@@ -57,7 +57,20 @@
     </div>
     <div id="mynavright">
         <ul>
-            <li id="navright"><a href="signup.php">Sign Up</a></li>
+            <?php
+            session_start();
+
+            if(!isset($_SESSION['logged'])) {
+            ?>
+            <li><a href="signup.php">Sign Up</a></li>
+            <li><a href="login.php">Log In</a></li>
+            <?php
+            } else {
+            ?>
+            <li><a href="logout.php">Log Out</a></li>
+            <?php
+            }
+            ?>
         </ul>
     </div>
 </div>

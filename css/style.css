@@ -180,7 +180,7 @@ h1.b1,h2.b2,h3.b3 {
 }
 .rslides img {
     display: block;
-    height: auto;
+    height: 100px;
     float: left;
     width: 100%;
     border: 0;

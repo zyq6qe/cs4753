@@ -34,7 +34,6 @@
 }
 
 #myheader li a:hover {
-    color: darkgrey;
     background-color: #ffdfdf;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -74,8 +73,22 @@
     line-height: 35px;
 }
 
+#mynavright li {
+    margin-left: -5px;
+}
+
 #spacing {
-    width: 500px;
+    width: 100%;
+    height: 50px;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #ed645c;
+}
+
+#myslider {
     height: 50px;
 }
 
