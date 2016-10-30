@@ -10,6 +10,8 @@ include "base.php";
     <div class="section group" id="signup">
         <br>
         <form action="signupConfirm.php" method="post">
+
+            <h4>Personal Information</h4>
             <div class="row">
                 <div class="col-md-6">
                     <label>First name:</label>
@@ -30,7 +32,6 @@ include "base.php";
                     <br/>
                     <label>City:</label>
                     <input class="form-control" placeholder="Enter your city" type="text" name="city" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" required>
-
                     <br/>
                     <label>State:</label>
                     <!--<input class="form-control" placeholder="Enter your state" type="text" name="state" pattern="^((A[LKZR])|(C[AOT])|(D[EC])|(FL)|(GA)|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EDAINSOT])|(N[EVHJMYCD])|(O[HKR])|(PA)|(RI)|(S[CD])|(T[NX])|(UT)|(V[TA])|(W[AVIY]))$" required>-->
@@ -91,6 +92,15 @@ include "base.php";
                     <label>Zip Code:</label>
                     <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" required>
                 </div>
+            </div>
+
+            <br/><br/>
+            <h4>Payment Information</h4>
+            <div class="row">
+                INSERT CREDIT FORM HERE
+                <label>Address:</label>
+                <input class="form-control" placeholder="Enter your address" type="text" name="address" required pattern="\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,30}(\s[a-zA-Z]{2,30})?">
+                <br/>
             </div>
             <br/>
             <input type="submit" id="mybutton" class="btn btn-primary">
