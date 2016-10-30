@@ -104,7 +104,23 @@ include "base.php";
                     <h3 class="panel-title">Banking Information</h3>
                 </div> 
                 <div class="panel-body">
-                    INSERT CREDIT FORM HERE
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>First name:</label>
+                            <input class="form-control" placeholder="Enter your first name" type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                            <br/>
+                            <label>Last name:</label>
+                            <input class="form-control" placeholder="Enter your last name" type="text" name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                            <br/>
+                            <label>Email:</label>
+                            <input class="form-control" placeholder="Enter your email" type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                            <br/>
+                            <label>Password:</label>
+                            <input class="form-control" placeholder="Enter your password" type="password" name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
+                        </div>
+                    </div>
+                </div>
+                </div>
                 </div>
             <input type="submit" id="mybutton" class="btn btn-primary">
         </form>
