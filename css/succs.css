@@ -142,3 +142,10 @@ select:invalid {
 select:valid {
     border: 1px solid black;
 }
+
+.panel-default > .panel-heading-custom {
+    height: 50px;
+    font-size: 16px;
+    background: #ed645c;
+    color: #fff;
+}
