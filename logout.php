@@ -6,10 +6,6 @@ if($_SESSION['logged']) {
     unset($_SESSION['username']);
     $_SESSION['logged'] = "false";
     session_destroy();
+    header('Location: index.php');
 }
 ?>
-<div class="container">
-    <br/><br/>
-    <p>You have been logged out.</p><br/>
-    <p id="mybutton" class="btn btn-primary"><a href="index.php">Back to home</a></p>
-</div>
