@@ -129,7 +129,7 @@ include "base.php";
                             </select>
                         </div>
                         <div class="col-sm-2">
-                            <label> </label>
+                            <label id="labdiv"></label>
                             <select class="form-control" name="expyear" required>
                                 <option value="" disabled selected>Year</option>
                                 <option value="2016">2016</option>
@@ -153,7 +153,7 @@ include "base.php";
                     </div>
                 </div>
                 </div>
-                </div>
+            </div>
             <input type="submit" id="mybutton" class="btn btn-primary">
         </form>
         <br/>
