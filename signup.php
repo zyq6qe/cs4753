@@ -105,18 +105,34 @@ include "base.php";
                 </div> 
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-6">
-                            <label>First name:</label>
-                            <input class="form-control" placeholder="Enter your first name" type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                        <div class="col-sm-6">
+                            <label>Credit Card Number:</label>
+                            <input class="form-control" placeholder="Enter your card number" type="text" name="cardnum" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
                             <br/>
-                            <label>Last name:</label>
-                            <input class="form-control" placeholder="Enter your last name" type="text" name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>Expiration Date:</label>
+                            <!--<input class="form-control" placeholder="Enter your state" type="text" name="state" pattern="^((A[LKZR])|(C[AOT])|(D[EC])|(FL)|(GA)|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EDAINSOT])|(N[EVHJMYCD])|(O[HKR])|(PA)|(RI)|(S[CD])|(T[NX])|(UT)|(V[TA])|(W[AVIY]))$" required>-->
+                            <select class="form-control" name="expdate" required>
+                                <option value="" disabled selected>Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label>CVV:</label>
+                            <input class="form-control" placeholder="Enter CVV" type="text" name="cvv" pattern="/^[0-9]{3,4}$/" required>
                             <br/>
-                            <label>Email:</label>
-                            <input class="form-control" placeholder="Enter your email" type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
-                            <br/>
-                            <label>Password:</label>
-                            <input class="form-control" placeholder="Enter your password" type="password" name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
                         </div>
                     </div>
                 </div>
