@@ -149,7 +149,7 @@ include "base.php";
                         </div>
                         <div class="col-sm-3">
                             <label>CVV:</label>
-                            <input class="form-control" placeholder="Enter CVV" type="text" name="cvv" pattern="^[0-9]{3,4}$/" required>
+                            <input class="form-control" placeholder="Enter CVV" type="text" name="cvv" pattern="^[0-9]{3,4}$" required>
                             <br/>
                         </div>
                     </div>
