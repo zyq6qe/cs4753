@@ -156,4 +156,9 @@ select:valid {
     font-size: 16px;
     background: #ed645c;
     color: #fff;
+    margin-top: -20px;
+}
+
+#mypaneltitle {
+    margin-top: 5px;
 }

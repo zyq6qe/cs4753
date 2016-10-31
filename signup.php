@@ -12,7 +12,7 @@ include "base.php";
             <div class="panel-group"> 
                 <div class="panel panel-default"> 
                     <div class="panel-heading panel-heading-custom">
-                        <h3 class="panel-title">Personal Information</h3>
+                        <h3 class="panel-title" id="mypaneltitle">Personal Information</h3>
                     </div> 
                     <div class="panel-body">
                         <div class="row">
@@ -94,14 +94,16 @@ include "base.php";
                                 <br/>
                                 <label>Zip Code:</label>
                                 <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" required>
+                                <br/>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <br/>
             <div class="panel panel-default"> 
                 <div class="panel-heading panel-heading-custom">
-                    <h3 class="panel-title">Banking Information</h3>
+                    <h3 class="panel-title" id="mypaneltitle">Banking Information</h3>
                 </div> 
                 <div class="panel-body">
                     <div class="row">
