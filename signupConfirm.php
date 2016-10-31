@@ -30,17 +30,17 @@ $cvv = $_POST['cvv'];
 try {
     $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
     $db->query("insert into Payment values('$email', '$cardnum', '$expmonth', '$expyear', '$cvv')");
-    $feedback = 'Thanks for registering!';
+    header('Location: index.php');
+
 } catch (Exception $e) {
     $feedback = 'Error in registration. Please try again!';
+    echo '<p id="feedback">' . $feedback . '</p>';
     die();
 }
 
-echo '<p id="feedback">' . $feedback . '</p>';
+
 
 ?>
-    <br/>
-    <p id="mybutton" class="btn btn-primary"><a href="index.php">Back to home</a></p>
 
 
 </div>
