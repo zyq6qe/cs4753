@@ -13,20 +13,19 @@ $firstname = $lastname = $email = $password = $addr = $city = $state = $zip = ''
 $cardnum = $expmonth = $expyear = $cvv = '';
 $feedback = '';
 
-if (isset($_POST['firstname'])) {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $addr = $_POST['address'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $zip = $_POST['zipcode'];
-    $cardnum = $_POST['cardnum'];
-    $expmonth = $_POST['expmonth'];
-    $expyear = $_POST['expyear'];
-    $cvv = $_POST['cvv'];
-}
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$addr = $_POST['address'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$zip = $_POST['zipcode'];
+$cardnum = $_POST['cardnum'];
+$expmonth = $_POST['expmonth'];
+$expyear = $_POST['expyear'];
+$cvv = $_POST['cvv'];
+
 
 try {
     $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
