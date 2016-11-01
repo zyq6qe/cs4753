@@ -1,11 +1,13 @@
 <?php
 
 if (session_id() !== "") {
-       session_unset();
-       session_destroy();
-    }
-    session_start();
-    $_SESSION['csrf'] = bin2hex(openssl_random_pseudo_bytes(32));
+    $localemail = $_SESSION['myemail'];
+    session_unset();
+    session_destroy();
+}
+session_start();
+$_SESSION['csrf'] = bin2hex(openssl_random_pseudo_bytes(32));
+$_SESSION['myemail'] = $localemail;
 /*
     * Data for REST API calls.
     * $_SESSION['expressCheckoutPaymentData'] is used in the Express Checkout flow
@@ -13,9 +15,9 @@ if (session_id() !== "") {
     */
 $hostName = $_SERVER['HTTP_HOST'];
 $appName = explode("/", $_SERVER['REQUEST_URI'])[1];
-$cancelUrl= "http://".$hostName."/".$appName."/cancel.php";
-$payUrl = "http://".$hostName."/".$appName."/pay.php";
-$placeOrderUrl = "http://".$hostName."/".$appName."/placeOrder.php";
+$cancelUrl = "http://" . $hostName . "/" . $appName . "/cancel.php";
+$payUrl = "http://" . $hostName . "/" . $appName . "/pay.php";
+$placeOrderUrl = "http://" . $hostName . "/" . $appName . "/placeOrder.php";
 
 $_SESSION['expressCheckoutPaymentData'] = '{
                                   "transactions":[
@@ -51,8 +53,8 @@ $_SESSION['expressCheckoutPaymentData'] = '{
                                   },
                                   "intent":"sale",
                                   "redirect_urls":{
-                                     "cancel_url":"'.$cancelUrl.'",
-                                     "return_url":"'.$placeOrderUrl.'"
+                                     "cancel_url":"' . $cancelUrl . '",
+                                     "return_url":"' . $placeOrderUrl . '"
                                   }
                                }';
 
@@ -92,11 +94,10 @@ $_SESSION['markFlowPaymentData'] = '{
                               }
                            ],
                            "redirect_urls":{
-                              "return_url":"'.$payUrl.'",
-                              "cancel_url":"'.$cancelUrl.'"
+                              "return_url":"' . $payUrl . '",
+                              "cancel_url":"' . $cancelUrl . '"
                            }
                         }';
-
 
 
 ?>

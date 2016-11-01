@@ -13,28 +13,36 @@ include "base.php";
                 <div class="panel panel-default"> 
                     <div class="panel-heading panel-heading-custom">
                         <h3 class="panel-title" id="mypaneltitle">Personal Information</h3>
-                    </div> 
+                    </div>
+                     
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>First name:</label>
-                                <input class="form-control" placeholder="Enter your first name" type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                                <input class="form-control" placeholder="Enter your first name" type="text"
+                                       name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
                                 <br/>
                                 <label>Last name:</label>
-                                <input class="form-control" placeholder="Enter your last name" type="text" name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                                <input class="form-control" placeholder="Enter your last name" type="text"
+                                       name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
                                 <br/>
                                 <label>Email:</label>
-                                <input class="form-control" placeholder="Enter your email" type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                                <input class="form-control" placeholder="Enter your email" type="text" name="email"
+                                       pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
                                 <br/>
                                 <label>Password:</label>
-                                <input class="form-control" placeholder="Enter your password" type="password" name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
+                                <input class="form-control" placeholder="Enter your password" type="password"
+                                       name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
                             </div>
                             <div class="col-md-6">
                                 <label>Address:</label>
-                                <input class="form-control" placeholder="Enter your address" type="text" name="address" required pattern="\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,30}(\s[a-zA-Z]{2,30})?">
+                                <input class="form-control" placeholder="Enter your address" type="text" name="address"
+                                       required
+                                       pattern="\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,30}(\s[a-zA-Z]{2,30})?">
                                 <br/>
                                 <label>City:</label>
-                                <input class="form-control" placeholder="Enter your city" type="text" name="city" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" required>
+                                <input class="form-control" placeholder="Enter your city" type="text" name="city"
+                                       pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" required>
                                 <br/>
                                 <label>State:</label>
                                 <!--<input class="form-control" placeholder="Enter your state" type="text" name="state" pattern="^((A[LKZR])|(C[AOT])|(D[EC])|(FL)|(GA)|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EDAINSOT])|(N[EVHJMYCD])|(O[HKR])|(PA)|(RI)|(S[CD])|(T[NX])|(UT)|(V[TA])|(W[AVIY]))$" required>-->
@@ -93,7 +101,8 @@ include "base.php";
                                 </select>
                                 <br/>
                                 <label>Zip Code:</label>
-                                <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" required>
+                                <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode"
+                                       pattern="^\d{5}(?:[-\s]\d{4})?$" required>
                                 <br/>
                             </div>
                         </div>
@@ -101,59 +110,64 @@ include "base.php";
                 </div>
 
                 <br/>
-            <div class="panel panel-default"> 
-                <div class="panel-heading panel-heading-custom">
-                    <h3 class="panel-title" id="mypaneltitle">Banking Information</h3>
-                </div> 
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <label>Credit Card Number:</label>
-                            <input class="form-control" placeholder="Enter your card number (no dashes or spaces)" type="text" name="cardnum" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
-                            <br/>
-                        </div>
-                        <div class="col-sm-2">
-                            <label>Expiration Date:</label>
-                            <select class="form-control" name="expmonth" required>
-                                <option value="" disabled selected>Month</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <label id="labdiv"></label>
-                            <select class="form-control" name="expyear" required>
-                                <option value="" disabled selected>Year</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-3">
-                            <label>CVV:</label>
-                            <input class="form-control" placeholder="Enter CVV" type="text" name="cvv" pattern="^[0-9]{3,4}$" required>
-                            <br/>
+                <div class="panel panel-default"> 
+                    <div class="panel-heading panel-heading-custom">
+                        <h3 class="panel-title" id="mypaneltitle">Banking Information</h3>
+                    </div>
+                     
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <label>Credit Card Number:</label>
+                                <input class="form-control" placeholder="Enter your card number (no dashes or spaces)"
+                                       type="text" name="cardnum"
+                                       pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+                                       required>
+                                <br/>
+                            </div>
+                            <div class="col-sm-2">
+                                <label>Expiration Date:</label>
+                                <select class="form-control" name="expmonth" required>
+                                    <option value="" disabled selected>Month</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2">
+                                <label id="labdiv"></label>
+                                <select class="form-control" name="expyear" required>
+                                    <option value="" disabled selected>Year</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <label>CVV:</label>
+                                <input class="form-control" placeholder="Enter CVV" type="text" name="cvv"
+                                       pattern="^[0-9]{3,4}$" required>
+                                <br/>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <input type="submit" id="mybutton" class="btn btn-primary">

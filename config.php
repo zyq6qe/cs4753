@@ -1,13 +1,13 @@
 <?php
 
-$host='127.0.0.1';
+$host = '127.0.0.1';
 $dbname = 'cs4753';
-$user='root';
-$password='';
+$user = 'root';
+$password = '';
 
 
 $db = new mysqli('localhost', $user, $password, $dbname);
 
-if($db->connect_error):
+if ($db->connect_error):
     die ("Could not connect to db " . $db->connect_error);
 endif;

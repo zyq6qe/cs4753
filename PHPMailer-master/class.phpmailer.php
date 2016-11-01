@@ -719,21 +719,21 @@ class PHPMailer
             case 'html':
                 //Cleans up output a bit for a better looking, HTML-safe output
                 echo htmlentities(
-                        preg_replace('/[\r\n]+/', '', $str),
-                        ENT_QUOTES,
-                        'UTF-8'
-                    )
-                    . "<br>\n";
+                    preg_replace('/[\r\n]+/', '', $str),
+                    ENT_QUOTES,
+                    'UTF-8'
+                )
+                . "<br>\n";
                 break;
             case 'echo':
             default:
                 //Normalize line breaks
                 $str = preg_replace('/\r\n?/ms', "\n", $str);
                 echo gmdate('Y-m-d H:i:s') . "\t" . str_replace(
-                        "\n",
-                        "\n                   \t                  ",
-                        trim($str)
-                    ) . "\n";
+                    "\n",
+                    "\n                   \t                  ",
+                    trim($str)
+                ) . "\n";
         }
     }
 
@@ -1182,8 +1182,8 @@ class PHPMailer
             if ($this->has8bitChars($domain) and @mb_check_encoding($domain, $this->CharSet)) {
                 $domain = mb_convert_encoding($domain, 'UTF-8', $this->CharSet);
                 if (($punycode = defined('INTL_IDNA_VARIANT_UTS46') ?
-                        idn_to_ascii($domain, 0, INTL_IDNA_VARIANT_UTS46) :
-                        idn_to_ascii($domain)) !== false) {
+                    idn_to_ascii($domain, 0, INTL_IDNA_VARIANT_UTS46) :
+                    idn_to_ascii($domain)) !== false) {
                     return substr($address, 0, $pos) . $punycode;
                 }
             }
@@ -2719,7 +2719,7 @@ class PHPMailer
             /** @noinspection PhpMissingBreakStatementInspection */
             case 'comment':
                 $matchcount = preg_match_all('/[()"]/', $str, $matches);
-            // Intentional fall-through
+                // Intentional fall-through
             case 'text':
             default:
                 $matchcount += preg_match_all('/[\000-\010\013\014\016-\037\177-\377]/', $str, $matches);
@@ -2890,8 +2890,8 @@ class PHPMailer
             case 'comment':
                 // RFC 2047 section 5.2
                 $pattern = '\(\)"';
-            // intentional fall-through
-            // for this reason we build the $pattern without including delimiters and []
+                // intentional fall-through
+                // for this reason we build the $pattern without including delimiters and []
             case 'text':
             default:
                 // RFC 2047 section 5.1

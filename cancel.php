@@ -1,12 +1,11 @@
 <?php
-    /*
-        * Cancel Order page
-    */
+/*
+    * Cancel Order page
+*/
+include "base.php";
 
-    if (session_id() == "")
-        session_start();
-
-    include "base.php";
+if (session_id() == "")
+    session_start();
 
 ?>
 <div class="container">

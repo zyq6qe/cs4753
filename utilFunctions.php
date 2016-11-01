@@ -11,47 +11,48 @@
 	*		array["http_code"]   : the http status code   
 	*		array["jason"]       : the response string
 	*/
-function curlCall($curlServiceUrl, $curlHeader, $curlPostData) {
+function curlCall($curlServiceUrl, $curlHeader, $curlPostData)
+{
 
-	// response container
-	$resp = array(
-		"http_code" => 0,
-		"jason"     => ""
-	);
+    // response container
+    $resp = array(
+        "http_code" => 0,
+        "jason" => ""
+    );
 
-	//set the cURL parameters
-	$ch = curl_init($curlServiceUrl);
-	curl_setopt($ch, CURLOPT_VERBOSE, 1);
+    //set the cURL parameters
+    $ch = curl_init($curlServiceUrl);
+    curl_setopt($ch, CURLOPT_VERBOSE, 1);
 
-	//turning off the server and peer verification(TrustManager Concept).
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+    //turning off the server and peer verification(TrustManager Concept).
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 
-	curl_setopt($ch, CURLOPT_SSLVERSION , 'CURL_SSLVERSION_TLSv1_2');
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-	//curl_setopt($ch, CURLOPT_HEADER, true);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $curlHeader);
+    curl_setopt($ch, CURLOPT_SSLVERSION, 'CURL_SSLVERSION_TLSv1_2');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //curl_setopt($ch, CURLOPT_HEADER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $curlHeader);
 
-	if(!is_null($curlPostData)) {
-		curl_setopt($ch, CURLOPT_POST, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPostData);
-	}
-	//getting response from server
-	$response = curl_exec($ch);
+    if (!is_null($curlPostData)) {
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPostData);
+    }
+    //getting response from server
+    $response = curl_exec($ch);
 
-	$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-	curl_close($ch); // close cURL handler
-	
-	// some kind of an error happened
-	if (empty($response)) {
-		return $resp;
-	}
-	
-	$resp["http_code"] = $http_code;
-	$resp["json"] = json_decode($response, true);
-	
-	return $resp;
+    curl_close($ch); // close cURL handler
+
+    // some kind of an error happened
+    if (empty($response)) {
+        return $resp;
+    }
+
+    $resp["http_code"] = $http_code;
+    $resp["json"] = json_decode($response, true);
+
+    return $resp;
 }
 
 
@@ -59,14 +60,15 @@ function curlCall($curlServiceUrl, $curlHeader, $curlPostData) {
  * Prevents Cross-Site Scripting Forgery
  * @return boolean
  */
-function verify_nonce() {
-	if( isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['csrf'] ) {
-		return true;
-	}
-	if( isset($_POST['csrf']) && $_POST['csrf'] == $_SESSION['csrf'] ) {
-		return true;
-	}
-	return false;
+function verify_nonce()
+{
+    if (isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['csrf']) {
+        return true;
+    }
+    if (isset($_POST['csrf']) && $_POST['csrf'] == $_SESSION['csrf']) {
+        return true;
+    }
+    return false;
 }
 
 ?>
