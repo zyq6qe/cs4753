@@ -5,7 +5,8 @@ include('apiCallsData.php');
 include('paypalConfig.php');
 
 ?>
-
+<div class="container">
+    <br></br>
 <form id="myContainer" action="startPayment.php" method="POST">
     <div class="row">
         <select id="paypd" name="paypd">
@@ -17,6 +18,7 @@ include('paypalConfig.php');
         <input type="text" id="pay" name="pay" value=" " readonly="readonly">
     </div>
 </form>
+</div>
 <script>
     $(document).ready(function() {
 
