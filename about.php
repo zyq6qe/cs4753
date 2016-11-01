@@ -24,7 +24,7 @@ include "base.php";
         <p>Here at Succs4You, we value brighter, more welcoming homes, as well as the environmental and health-related benefits of having some lovely budding buddies! Having indoor plant companions is said to help clean the air, deter illness, boost healing, and increase productivity.</p>
         <br/>
 
-        <p>Make a hassle-free home! You create your own plant companion and we’ll ship it right to you. Dissatisfied with our service, or dislike your new friend? We offer free returns!</p>
+        <p>Make a hassle-free home! You create your own plant companion and we’ll ship it right to you. We offer free shipping! Dissatisfied with our service, or dislike your new friend? We offer free returns!</p>
         <br/>
 
         <p id="mybutton" class="btn btn-primary"><a href="signup.php">Sign Up Today!</a></p>

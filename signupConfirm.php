@@ -26,6 +26,8 @@ $expmonth = $_POST['expmonth'];
 $expyear = $_POST['expyear'];
 $cvv = $_POST['cvv'];
 
+$_SESSION['email'] = $email;
+
 
 try {
     $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
