@@ -7,17 +7,32 @@ include('paypalConfig.php');
 ?>
 
 <form id="myContainer" action="startPayment.php" method="POST">
-<input type="hidden" name="csrf" value="<?php echo($_SESSION['csrf']);?>"/>
-Camera:<input type="text" name="camera_amount" value="300" readonly></input><br>
-Tax:<input type="text" name="tax" value="5" readonly></input><br>
-Insurance:<input type="text" name="insurance" value="10" readonly></input><br>
-Handling:<input type="text" name="handling_fee" value="5" readonly></input><br>
-Est. Shipping:<input type="text" name="estimated_shipping" value="2" readonly></input><br>
-Shipping Discount:<input type="text" name="shipping_discount" value="-2" readonly></input><br>
-Total:<input type="text" name="total_amount" value="100" readonly></input><br>
-Currency:<input type="text" name="currencyCodeType" value="USD" readonly></input><br>
-</form>
+    <div class="row">
+        <select id="paypd" name="paypd">
+            <option value="" disabled selected>Select payment frequency:</option>
+            <option value="$30">Monthly</option>
+            <option value="$300">Annually</option>
+        </select>
 
+        <input type="text" id="pay" name="pay" value=" " readonly="readonly">
+    </div>
+</form>
+<script>
+    $(document).ready(function() {
+
+        $("#paypd option").filter(function() {
+            return $(this).val() == $("#pay").val();
+        }).attr('selected', true);
+
+
+
+        $("#paypd").live("change", function() {
+
+            $("#pay").val($(this).find("option:selected").attr("value"));
+        });
+    });
+
+</script>
 <script type="text/javascript">
     window.paypalCheckoutReady = function () {
         paypal.checkout.setup('Your merchant id', {
