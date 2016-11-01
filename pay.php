@@ -7,6 +7,7 @@
 
     include('utilFunctions.php');
     include('paypalFunctions.php');
+    include "base.php";
 
 
     if( isset($_GET['paymentId']) && isset($_GET['PayerID'])){ //Proceed to Checkout or Mark flow
@@ -57,7 +58,7 @@
     $postalCode = filter_var($json_response['payer']['payer_info']['shipping_address']['postal_code'],FILTER_SANITIZE_SPECIAL_CHARS);
     $countryCode= filter_var($json_response['payer']['payer_info']['shipping_address']['country_code'],FILTER_SANITIZE_SPECIAL_CHARS);
 
-    include "base.php";
+
 ?>
 <div class="container">
     <br></br>
@@ -81,6 +82,24 @@
     <br/>
     <p id="mybutton" class="btn btn-primary"><a href="index.php">Back to home</a></p>
     </div>
+
+<?php
+//require 'PHPMailerAutoload.php';
+//$receiver = $_SESSION['email'];
+//
+//$mail = new PHPMailer;
+//$mail->setFrom('succs4u@gmail.com', 'Succs4U');
+//$mail->addAddress($receiver, 'My Friend');
+//$mail->Subject  = 'Thanks for your registration!';
+//$mail->Body     = 'Thank you for signing up for Succs4U!';
+//if(!$mail->send()) {
+//    echo 'Message was not sent.';
+//    echo 'Mailer error: ' . $mail->ErrorInfo;
+//} else {
+//    echo 'Message has been sent.';
+//}
+//?>
+
 <?php
     if (session_id() !== "") {
                session_unset();

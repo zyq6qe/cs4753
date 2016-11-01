@@ -1,4 +1,8 @@
 <?php
+
+if (session_id() == "")
+    session_start();
+
 include "base.php";
 ?>
 
@@ -32,7 +36,7 @@ $_SESSION['email'] = $email;
 try {
     $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
     $db->query("insert into Payment values('$email', '$cardnum', '$expmonth', '$expyear', '$cvv')");
-    header('Location: subscription.php');
+    header('Location: test.php');
 
 } catch (Exception $e) {
     $feedback = 'Error in registration. Please try again!';
