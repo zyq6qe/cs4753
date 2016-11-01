@@ -120,9 +120,7 @@ include "base.php";
                             <div class="col-sm-5">
                                 <label>Credit Card Number:</label>
                                 <input class="form-control" placeholder="Enter your card number (no dashes or spaces)"
-                                       type="text" name="cardnum"
-                                       pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
-                                       required>
+                                       type="text" name="cardnum" pattern="^([0-9]{4}[\s-]?){3}([0-9]{4})$" required>
                                 <br/>
                             </div>
                             <div class="col-sm-2">
