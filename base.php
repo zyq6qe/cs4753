@@ -58,7 +58,8 @@
     <div id="mynavright">
         <ul>
             <?php
-            session_start();
+            if (session_id() == "")
+                session_start();
 
             if(!isset($_SESSION['logged'])) {
             ?>

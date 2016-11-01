@@ -6,7 +6,7 @@
     if (session_id() == "")
         session_start();
 
-    include('header.php');
+    include "base.php";
 	
 	$arr = $_SESSION["error"];
 	
@@ -30,6 +30,3 @@
         </div>
         <div class="col-md-4"></div>
     </div>
-<?php
-    include('footer.php');
-?>

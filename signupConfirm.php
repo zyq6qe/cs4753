@@ -32,7 +32,7 @@ $_SESSION['email'] = $email;
 try {
     $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
     $db->query("insert into Payment values('$email', '$cardnum', '$expmonth', '$expyear', '$cvv')");
-    header('Location: index.php');
+    header('Location: subscription.php');
 
 } catch (Exception $e) {
     $feedback = 'Error in registration. Please try again!';

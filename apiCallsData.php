@@ -36,7 +36,7 @@ $_SESSION['expressCheckoutPaymentData'] = '{
                                         "item_list":{
                                            "items":[
                                               {
-                                                 "name":"Camera",
+                                                 "name":"Subscription",
                                                  "quantity":"1",
                                                  "price":"300",
                                                  "sku":"1",
@@ -81,7 +81,7 @@ $_SESSION['markFlowPaymentData'] = '{
                                  "item_list":{
                                     "items":[
                                        {
-                                          "name":"Camera",
+                                          "name":"Subscription",
                                           "quantity":"1",
                                           "price":"300",
                                           "sku":"1",
