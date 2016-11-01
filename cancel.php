@@ -3,16 +3,22 @@
         * Cancel Order page
     */
 
-include "base.php";
-
-if (session_id() == "")
+    if (session_id() == "")
         session_start();
+
+    include('header.php');
 ?>
-    <div class="container">
-        <br/><br/>
-        <h4>
-            You cancelled the order.
-        </h4>
-        <br/>
-        <p id="mybutton" class="btn btn-primary"><a href="index.php">Back to home</a></p>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h4>
+                You cancelled the order.
+            </h4>
+            <br/>
+            Return to <a href="index.php">home page</a>.
+        </div>
+        <div class="col-md-4"></div>
     </div>
+<?php
+    include('footer.php');
+?>
