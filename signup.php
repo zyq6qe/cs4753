@@ -112,40 +112,10 @@ include "base.php";
                             <input class="form-control" placeholder="Enter your card number (no dashes or spaces)" type="text" name="cardnum" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required>
                             <br/>
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <label>Expiration Date:</label>
-                            <select class="form-control" name="expmonth" required>
-                                <option value="" disabled selected>Month</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <label id="labdiv"></label>
-                            <select class="form-control" name="expyear" required>
-                                <option value="" disabled selected>Year</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                            </select>
+                            <input class="form-control" type="month" name="expdate" min="2016-12"required>
+                            </input>
                         </div>
                         <div class="col-sm-3">
                             <label>CVV:</label>
