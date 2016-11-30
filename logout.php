@@ -1,6 +1,6 @@
 <?php
 include "base.php";
-if($_SESSION['logged']) {
+if ($_SESSION['logged']) {
     unset($_SESSION['logged']);
     unset($_SESSION['started']);
     unset($_SESSION['username']);

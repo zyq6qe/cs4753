@@ -162,3 +162,8 @@ select:valid {
 #mypaneltitle {
     margin-top: 5px;
 }
+
+#myContainer input {
+    /*style="width: 100px; display: inline-block; margin-left: 10px"*/
+    width: 100px;
+}

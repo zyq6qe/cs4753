@@ -13,28 +13,36 @@ include "base.php";
                 <div class="panel panel-default"> 
                     <div class="panel-heading panel-heading-custom">
                         <h3 class="panel-title" id="mypaneltitle">Personal Information</h3>
-                    </div> 
+                    </div>
+                     
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>First name:</label>
-                                <input class="form-control" placeholder="Enter your first name" type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                                <input class="form-control" placeholder="Enter your first name" type="text"
+                                       name="firstname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
                                 <br/>
                                 <label>Last name:</label>
-                                <input class="form-control" placeholder="Enter your last name" type="text" name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
+                                <input class="form-control" placeholder="Enter your last name" type="text"
+                                       name="lastname" pattern="^[a-zA-Z][a-zA-Z]+$" required>
                                 <br/>
                                 <label>Email:</label>
-                                <input class="form-control" placeholder="Enter your email" type="text" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                                <input class="form-control" placeholder="Enter your email" type="text" name="email"
+                                       pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
                                 <br/>
                                 <label>Password:</label>
-                                <input class="form-control" placeholder="Enter your password" type="password" name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
+                                <input class="form-control" placeholder="Enter your password" type="password"
+                                       name="password" pattern="^[a-zA-Z0-9@$!%*#?&]*$" required>
                             </div>
                             <div class="col-md-6">
                                 <label>Address:</label>
-                                <input class="form-control" placeholder="Enter your address" type="text" name="address" required pattern="\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,30}(\s[a-zA-Z]{2,30})?">
+                                <input class="form-control" placeholder="Enter your address" type="text" name="address"
+                                       required
+                                       pattern="\d{1,3}.?\d{0,3}\s[a-zA-Z]{2,30}\s[a-zA-Z]{2,30}(\s[a-zA-Z]{2,30})?">
                                 <br/>
                                 <label>City:</label>
-                                <input class="form-control" placeholder="Enter your city" type="text" name="city" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" required>
+                                <input class="form-control" placeholder="Enter your city" type="text" name="city"
+                                       pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$" required>
                                 <br/>
                                 <label>State:</label>
                                 <!--<input class="form-control" placeholder="Enter your state" type="text" name="state" pattern="^((A[LKZR])|(C[AOT])|(D[EC])|(FL)|(GA)|(HI)|(I[DLNA])|(K[SY])|(LA)|(M[EDAINSOT])|(N[EVHJMYCD])|(O[HKR])|(PA)|(RI)|(S[CD])|(T[NX])|(UT)|(V[TA])|(W[AVIY]))$" required>-->
@@ -93,7 +101,8 @@ include "base.php";
                                 </select>
                                 <br/>
                                 <label>Zip Code:</label>
-                                <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$" required>
+                                <input class="form-control" placeholder="Enter your zip code" type="text" name="zipcode"
+                                       pattern="^\d{5}(?:[-\s]\d{4})?$" required>
                                 <br/>
                             </div>
                         </div>
@@ -123,7 +132,6 @@ include "base.php";
                             <br/>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <input type="submit" id="mybutton" class="btn btn-primary">
