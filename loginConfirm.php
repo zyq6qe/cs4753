@@ -29,7 +29,7 @@ if ($result = $db->query($query, MYSQLI_USE_RESULT)) {
 if ($num_rows == 1) {
     $_SESSION['logged'] = 1;
     $_SESSION['email'] = $_POST['email'];
-    header('Location: index.php');
+    header('Location: memberindex.php');
 } else { ?>
 
     <div class="container">

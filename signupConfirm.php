@@ -15,7 +15,7 @@ if (session_id() == "")
     require "config.php";
 
     $firstname = $lastname = $email = $password = $addr = $city = $state = $zip = '';
-    $cardnum = $expmonth = $expyear = $cvv = '';
+    $cardnum = $expdate = $cvv = '';
     $feedback = '';
 
     $firstname = $_POST['firstname'];
@@ -27,15 +27,14 @@ if (session_id() == "")
     $state = $_POST['state'];
     $zip = $_POST['zipcode'];
     $cardnum = $_POST['cardnum'];
-    $expmonth = $_POST['expmonth'];
-    $expyear = $_POST['expyear'];
+    $expdate = $_POST['expdate'];
     $cvv = $_POST['cvv'];
 
     $_SESSION['myemail'] = $email;
 
     try {
         $db->query("insert into Users values('$email', '$password', '$firstname', '$lastname', '$addr', '$city', '$state', '$zip')");
-        $db->query("insert into Payment values('$email', '$cardnum', '$expmonth', '$expyear', '$cvv')");
+        $db->query("insert into Payment values('$email', '$cardnum', '$expdate', '$cvv')");
         header('Location: subscription.php');
 
     } catch (Exception $e) {

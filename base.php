@@ -40,31 +40,32 @@ session_start();
 
 <div id="myheader">
     <div id="mylogo">
-        <a href="index.php">Succs4You</a>
+        <?php if (!isset($_SESSION['logged'])) { ?>
+            <a href="index.php">Succs4You</a>
+        <?php } else { ?>
+            <a href="memberindex.php">Succs4You</a>
+        <?php } ?>
     </div>
     <div id="mynavleft">
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li>
+                <?php if (!isset($_SESSION['logged'])) { ?>
+                    <a href="index.php">Home</a>
+                <?php } else { ?>
+                    <a href="memberindex.php">Home</a>
+                <?php } ?>
+            </li>
             <li><a href="about.php">About Us</a></li>
         </ul>
     </div>
     <div id="mynavright">
         <ul>
-            <?php
-            //            if (session_id() == "")
-            //                session_start();
-
-            if (!isset($_SESSION['logged'])) {
-                ?>
+            <?php if (!isset($_SESSION['logged'])) { ?>
                 <li><a href="signup.php">Sign Up</a></li>
                 <li><a href="login.php">Log In</a></li>
-                <?php
-            } else {
-                ?>
+            <?php } else { ?>
                 <li><a href="logout.php">Log Out</a></li>
-                <?php
-            }
-            ?>
+            <?php } ?>
         </ul>
     </div>
 </div>
